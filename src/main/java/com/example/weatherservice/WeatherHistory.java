@@ -9,7 +9,7 @@ import java.util.Objects;
 @Table(name = "weather_history")
 public class WeatherHistory {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private Date weather_date;
@@ -22,7 +22,6 @@ public class WeatherHistory {
 
     public WeatherHistory() {
     }
-
 
     public Integer getId() {
         return id;
